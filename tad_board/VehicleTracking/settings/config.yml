@@ -1,0 +1,48 @@
+device: ''
+
+#deepsort
+config_deepsort: VehicleTracking/settings/deep_sort.yaml
+deep_sort_weights: tad_board/VehicleTracking/models/ckpt.t7
+
+#yolo
+yolo_weights: VehicleTracking/models/yolov5s.pt
+#yolo_weights: VehicleTracking/models/best.pt
+agnostic_nms: false
+augment: false
+#['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse',
+# 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove',
+# 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza',
+# 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator',
+# 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush']
+
+classes: [0, 1, 2, 3, 5, 7]
+#classes: [0]
+conf_thres: 0.35
+imgsz:
+- 640
+iou_thres: 0.5
+max_det: 1000
+dnn: false
+evaluate: false
+half: false
+visualize: false
+
+#in-out
+fourcc: mp4v
+output: tad_board/inference/output
+save_csv: false
+save_txt: false
+save_vid: false
+show_vid: false
+
+#lines zones
+upper_ratio: 0.4
+lower_ratio: 0.9231
+
+#DB
+upload_db: false
+
+#deep_sort_pytorch/configs/deep_sort.yaml
+#../settings/deep_sort.yaml
+#../../video_nhax_cut_resize2.mp4
+#deep_sort_weights: deep_sort_pytorch/deep_sort/deep/checkpoint/ckpt.t7

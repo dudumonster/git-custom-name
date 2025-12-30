@@ -1,0 +1,12 @@
+agilex@xavier:~/Desktop$ source ~/archiconda3/etc/profile.d/conda.sh
+agilex@xavier:~/Desktop$ conda activate V2X
+C:\Users\dudumonster>scp agilex@192.168.153.238:~/Desktop/V2I_six/tad_board/latency_logs/obu_latency.csv "D:\研一课程\车辆网\final_homework\V2I_six\tad_board"
+agilex@192.168.153.238's password:
+obu_latency.csv                                                                       100%  244KB 119.3KB/s   00:02
+C:\Users\dudumonster>scp "D:\研一课程\车辆网\final_homework\V2I_six\tad_board\OBU_Recv_RSU_DetectVideo.py" agilex@192.168.153.238:~/Desktop/V2I_six/tad_board/
+agilex@192.168.153.238's password:
+OBU_Recv_RSU_DetectVideo.py                                                           100% 8196   400.2KB/s   00:00
+10.247.51.238
+scp agilex@10.247.51.2:~/Desktop "D:\Code\V2I_666"
+scp "D:\Code\V2I_666\tad_board\666.txt" agilex@10.247.51.238:~/Desktop/V2I_666/tad_board/
+python tad_board\V2V_Recv_Alert.py --bind-ip 10.247.51.238 --port 30402
